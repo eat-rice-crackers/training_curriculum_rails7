@@ -13,19 +13,13 @@
         <%= "#{day[:month]}/#{day[:date]} #{day[:day_of_week]} " %>
       </div>
       <ul class='content'>
-        <% if day[:plans].each do |plan| %>
+      <% if day[:plans].length != 0 %>
+        <% day[:plans].each do |plan| %>
           <li class='plan-list'>・<%= plan %></li>
         <% end %>
       <% end %>
-        <%day [:month] %>/<% day[:date] %>
-      </div>
-      <ul class='content'>
-        <% if day[:plans].length != 0 %>
-          <% day[:plans].each do |plan| %>
-            <li class='plan-list'>・<%= plan %></li>
-          <% end %>
-        <% end %>
       </ul>
+        <%day [:month] %>/<% day[:date] %>
     </div>
   <% end %>
 </div>
