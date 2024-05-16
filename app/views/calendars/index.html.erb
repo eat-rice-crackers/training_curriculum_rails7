@@ -13,8 +13,7 @@
         <%= "#{day[:month]}/#{day[:date]} #{day[:day_of_week]} " %>
       </div>
       <ul class='content'>
-      <% if day[:plans].length != 0 %>
-        <% day[:plans].each do |plan| %>
+        <% if day[:plans].each do |plan| %>
           <li class='plan-list'>・<%= plan %></li>
         <% end %>
       <% end %>
@@ -22,3 +21,5 @@
     </div>
   <% end %>
 </div>
+
+<% if day[:plans].length != 0 %>
